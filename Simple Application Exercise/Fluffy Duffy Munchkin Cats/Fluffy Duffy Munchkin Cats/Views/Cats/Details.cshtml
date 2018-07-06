@@ -1,0 +1,12 @@
+﻿@using Fluffy_Duffy_Munchkin_Cats.Models;
+@model Cat
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>@Model.Name</h1>
+
+<img src="@Model.ImageUrl" alt="Picture for @Model.Name" style="max-width: 300px" ) />
+
+<p><strong>Age: </strong>@Model.Age</p>
+
+<p><strong>Breed: </strong>@Model.Breed</p>

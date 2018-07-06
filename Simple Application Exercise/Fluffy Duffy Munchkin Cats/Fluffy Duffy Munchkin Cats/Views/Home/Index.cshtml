@@ -1,0 +1,18 @@
+﻿@using Fluffy_Duffy_Munchkin_Cats.Models;
+
+@model IEnumerable<Cat>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Fluffy Duffy Muchkin Cats</h1>
+<ul>
+    @foreach (var cat in Model)
+    {
+
+        <li><a asp-controller="Cats" asp-action="Details" asp-route-id="@cat.Id">@cat.Name</a></li>
+    }
+</ul>
+       
+<a asp-controller="Cats" asp-action="Add">Add a Cat</a>
